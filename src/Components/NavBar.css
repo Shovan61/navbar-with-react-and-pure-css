@@ -1,0 +1,48 @@
+.nav-links-small {
+    display: none;
+}
+.hamburger-menu {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links-small {
+        display: block;
+    }
+
+    .side-bar {
+        right: -100;
+    }
+    .side-bar.active {
+        right: 0;
+        height: 100vh;
+        position: fixed;
+        background-color: #444;
+        top: 0;
+        right: 0;
+        width: 25vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .sidebarItem {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 2rem;
+        margin-top: 3.8rem;
+        cursor: pointer;
+        color: white;
+        /* opacity: 0; */
+        transform: scale(0.00001);
+        position: relative;
+        right: -100;
+    }
+    .sidebarItem.active {
+        /* opacity: 1; */
+        right: 0;
+        transform: scale(1);
+    }
+    .sidebarItem:hover {
+        background-color: #777;
+    }
+}
